@@ -1,6 +1,6 @@
 
 namespace FinalTaller{
-    class Producto{
+    public class Producto{
 
         public int ID {get; set;}
         public String? Titulo {get; set;}
@@ -8,16 +8,16 @@ namespace FinalTaller{
         public int Precio {get; set;}
         public float PorcentajeDeDescuento {get; set;}
         public float Rating {get; set;}
+        public int Stock {get; set;}
+        public String? Marca {get; set;}
+        public String? Categoria {get; set;}
+
+        public float PrecioConDescuento(float descuento){
+            return Precio * descuento;
+        }
+
         
-        public String? Titulo {get; set;}
-       "titulo": "iPhone 9",
-       "descripcion": "An apple mobile which is nothing like apple",
-       "precio": 549,
-       "porcentajeDeDescuento": 12.96,
-       "rating": 4.69,
-       "stock": 94,
-       "marca": "Apple",
-       "categoria": "smartphones"
+
 
     }
 }
