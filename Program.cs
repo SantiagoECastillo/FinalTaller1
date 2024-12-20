@@ -14,9 +14,19 @@ namespace FinalTaller{
             listaDeProductos = cargador.LeerProductos(archivo);
             
             
-            //Console.WriteLine(ProcesamientoDeDatos.ContarProductos(listaDeProductos));
-            //Console.WriteLine(ProcesamientoDeDatos.ContarProductosPor(listaDeProductos, "Apple", "smartphones"));
+            //int cantidadDeProductos = ProcesamientoDeDatos.ContarProductos(listaDeProductos);
+            //int ProductosSmartPhoneApple = ProcesamientoDeDatos.ContarProductosPor(listaDeProductos, "Apple", "smartphones");
+            float PrecioPromedioLaptop = ProcesamientoDeDatos.PrecioPromedio(listaDeProductos, "laptop");
+            float PrecioPromedioSmarthphones = ProcesamientoDeDatos.PrecioPromedio(listaDeProductos, "smartphones");
+            int BajosProducto = ProcesamientoDeDatos.ProductosAReponer(listaDeProductos, 50).Count();
 
+            Producto nuevoProducto = new Producto();
+            nuevoProducto = ProcesamientoDeDatos.GetProducto(listaDeProductos, 5);
+            String NombreProducto = nuevoProducto.titulo;
+
+            //Informe nuevoInforme = new Informe(cantidadDeProductos, ProductosSmartPhoneApple, PrecioPromedioLaptop, PrecioPromedioSmarthphones, BajosProducto, NombreProducto);
+
+            //cargador.GuardarInforme("Respuesta.json", nuevoInforme);
 
         }
     }
