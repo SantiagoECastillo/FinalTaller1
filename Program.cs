@@ -10,7 +10,8 @@ namespace FinalTaller{
 
             List<Producto> listaDeProductos = new List<Producto>();
             String archivo = "Productos.json";
-            listaDeProductos = CargaDeDatos.LeerProductos(archivo);
+            CargaDeDatos cargador = new CargaDeDatos();
+            listaDeProductos = cargador.LeerProductos(archivo);
             
             
             //Console.WriteLine(ProcesamientoDeDatos.ContarProductos(listaDeProductos));
